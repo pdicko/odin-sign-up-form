@@ -1,0 +1,57 @@
+@use "index" as *;
+
+$primary-color: #161616;
+
+body {
+  font-family: $primary-font;
+  background-color: #e2e2e2;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.splash {
+  color: white;
+  max-width: 550px;
+  flex: 40%;
+  height: 100vh;
+  background-image: url(../assets/splash.jpg);
+  background-size: cover;
+  background-position: right;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  @include header-font;
+  background-color: #16161680;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+}
+
+.main {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex: 60%;
+}
+
+.intro {
+  width: 90%;
+  max-width: 750px;
+  padding-top: 150px;
+  padding-left: 40px;
+
+  h2 + h2 {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}
