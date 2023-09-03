@@ -6,7 +6,7 @@
   <title>Patcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
 
       <div class="intro">
         <h2>
-          This is not a real online service! You know you need something like This
+          This is not a real online service! You know you need something like this
           in your life to help you realize your deepest dreams. Sign up
           <em>now</em> to get started.
         </h2>
@@ -35,22 +35,34 @@
         <h2>Let's do this!</h2>
         <form action="" method="post">
           <div class="name form-row">
-            <label for="first-name">first name</label>
-            <input type="text" id="first-name">
-            <label for="last-name">last name</label>
-            <input type="text" id="last-name">
+            <div class="first-name">
+              <label for="first-name">first name</label>
+              <input type="text" id="first-name">
+            </div>
+            <div class="last-name">
+              <label for="last-name">last name</label>
+              <input type="text" id="last-name">
+            </div>
           </div>
           <div class="contact form-row">
-            <label for="email">email</label>
-            <input type="text" id="email">
-            <label for="phone">phone number</label>
-            <input type="tel" id="phone">
+            <div class="email">
+              <label for="email">email</label>
+              <input type="text" id="email">
+            </div>
+            <div class="phone">
+              <label for="phone">phone number</label>
+              <input type="tel" id="phone">
+            </div>
           </div>
           <div class="password form-row">
-            <label for="password">password</label>
-            <input type="password" name="password" id="password" class="error">
-            <label for="confirm-password">confirm password</label>
-            <input type="password" name="confirm-password" id="confirm-password" class="error">
+            <div class="password">
+              <label for="password">password</label>
+              <input type="password" name="password" id="password" class="error">
+            </div>
+            <div class="confirm-password">
+              <label for="confirm-password">confirm password</label>
+              <input type="password" name="confirm-password" id="confirm-password" class="error">
+            </div>
           </div>
         </form>
       </div>

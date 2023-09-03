@@ -5,3 +5,10 @@ $header-font: Abel, sans-serif;
   font-family: $header-font;
   font-size: 48px;
 }
+
+@mixin label-font {
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: .7rem;
+  letter-spacing: .2em;
+}
