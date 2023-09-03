@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patchr</title>
+  <title>Patcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <div class="splash">
       <div class="logo">
         <img src="/assets/odin-lined.png" alt="Odin logo" height="96">
-        <h1>Patchr</h1>
+        <h1>Patcher</h1>
       </div>
     </div>
 
@@ -30,6 +30,33 @@
         <h2>
           You <em>know</em> you want to.
         </h2>
+      </div>
+      <div class="sign-up-form">
+        <h2>Let's do this!</h2>
+        <form action="" method="post">
+          <div class="name form-row">
+            <label for="first-name">first name</label>
+            <input type="text" id="first-name">
+            <label for="last-name">last name</label>
+            <input type="text" id="last-name">
+          </div>
+          <div class="contact form-row">
+            <label for="email">email</label>
+            <input type="text" id="email">
+            <label for="phone">phone number</label>
+            <input type="tel" id="phone">
+          </div>
+          <div class="password form-row">
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" class="error">
+            <label for="confirm-password">confirm password</label>
+            <input type="password" name="confirm-password" id="confirm-password" class="error">
+          </div>
+        </form>
+      </div>
+      <div class="submit-footer">
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="">Log in</a></p>
       </div>
     </div>
 
