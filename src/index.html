@@ -37,39 +37,40 @@
           <div class="name form-row">
             <div class="first-name">
               <label for="first-name">first name</label>
-              <input type="text" id="first-name">
+              <input type="text" id="first-name" required>
             </div>
             <div class="last-name">
               <label for="last-name">last name</label>
-              <input type="text" id="last-name">
+              <input type="text" id="last-name" required>
             </div>
           </div>
           <div class="contact form-row">
             <div class="email">
               <label for="email">email</label>
-              <input type="text" id="email">
+              <input type="text" id="email" required>
             </div>
             <div class="phone">
-              <label for="phone">phone number</label>
+              <label for="phone">phone number <span class="optional-field">(optional)</span></label>
               <input type="tel" id="phone">
             </div>
           </div>
           <div class="password form-row">
             <div class="password">
               <label for="password">password</label>
-              <input type="password" name="password" id="password" class="error">
+              <input type="password" name="password" id="password" class="error" minlength="12" required>
             </div>
             <div class="confirm-password">
               <label for="confirm-password">confirm password</label>
-              <input type="password" name="confirm-password" id="confirm-password" class="error">
+              <input type="password" name="confirm-password" id="confirm-password" class="error" required>
             </div>
           </div>
+        </div>
+          <div class="submit-footer">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+          </div>
         </form>
-      </div>
-      <div class="submit-footer">
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="">Log in</a></p>
-      </div>
+
     </div>
 
   </div>
