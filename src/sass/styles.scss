@@ -87,6 +87,14 @@ h2 {
  }
 }
 
+.error-message {
+  color: #aa0000;
+  font-size: 13px;
+  font-weight: 300;
+  padding-left: 3px;
+  display: none;
+}
+
 input {
   appearance: none;
   outline: none;
@@ -101,8 +109,16 @@ input {
     box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
   }
 
-  .error {
+  &.error {
     border: 1px solid red;
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+    display: block;
   }
 }
 
