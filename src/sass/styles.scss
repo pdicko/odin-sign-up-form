@@ -2,6 +2,8 @@
 
 $primary-color: #f9fafb;
 $blue-element: #084365;
+$error-red: #c80000;
+$valid-green: #006800;
 
 body {
   font-family: $primary-font;
@@ -41,7 +43,6 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 12px;
-
 }
 
 .main {
@@ -87,12 +88,57 @@ h2 {
  }
 }
 
-.error-message {
-  color: #aa0000;
+.error-message, .error-password-match, .pw-chk {
+  color: $error-red;
   font-size: 13px;
   font-weight: 300;
   padding-left: 3px;
   display: none;
+}
+
+.password-field, .confirm-password-field {
+
+  &:focus:not(:placeholder-shown):invalid ~ .pw-chk {
+    display: block;
+  }
+
+  &:focus:not(:placeholder-shown):valid ~ .pw-chk  {
+    display: none;
+  }
+
+  &:focus:not(:placeholder-shown):invalid {
+    border: $error-red solid 2px;
+  }
+ 
+  &:focus:not(:placeholder-shown):valid {
+    border: $valid-green solid 2px;
+  }
+
+  &:not(focus):not(:placeholder-shown):valid {
+    border: $valid-green solid 2px;
+  }
+}
+
+.pw-chk ~ .pw-chk{
+  padding-left: 25px;
+  font-size: 12px;
+}
+
+.invalid-element {
+ 
+  &::before {
+    content: '✖';
+    padding-right: 5px;
+  }
+}
+
+.valid-element {
+
+  &::before {
+    content: '✔  ';
+  }
+
+  color: rgb(0, 77, 0)
 }
 
 input {
@@ -109,12 +155,8 @@ input {
     box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
   }
 
-  &.error {
-    border: 1px solid red;
-  }
-
   &:not(:focus):not(:placeholder-shown):invalid {
-    border: 1px solid red;
+    border: 2px solid $error-red;
   }
 
   &:not(:focus):not(:placeholder-shown):invalid ~ .error-message {

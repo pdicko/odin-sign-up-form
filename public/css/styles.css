@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #f9fafb;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.splash {
+  color: white;
+  max-width: 550px;
+  min-width: 300px;
+  flex: 40%;
+  height: 100vh;
+  background-image: url(../assets/splash.jpg);
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: Abel, sans-serif;
+  font-size: 48px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  background-color: rgba(22, 22, 22, 0.5019607843);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.main {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex: 60%;
+}
+
+.intro {
+  width: 90%;
+  max-width: 750px;
+  padding-top: 150px;
+  padding-left: 40px;
+}
+.intro h2 + h2 {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.sign-up-form {
+  background-color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.sign-up-form h2 {
+  padding-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 20px;
+}
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message, .error-password-match, .pw-chk {
+  color: #c80000;
+  font-size: 13px;
+  font-weight: 300;
+  padding-left: 3px;
+  display: none;
+}
+
+.password-field:focus:not(:placeholder-shown):invalid ~ .pw-chk, .confirm-password-field:focus:not(:placeholder-shown):invalid ~ .pw-chk {
+  display: block;
+}
+.password-field:focus:not(:placeholder-shown):valid ~ .pw-chk, .confirm-password-field:focus:not(:placeholder-shown):valid ~ .pw-chk {
+  display: none;
+}
+.password-field:focus:not(:placeholder-shown):invalid, .confirm-password-field:focus:not(:placeholder-shown):invalid {
+  border: #c80000 solid 2px;
+}
+.password-field:focus:not(:placeholder-shown):valid, .confirm-password-field:focus:not(:placeholder-shown):valid {
+  border: #006800 solid 2px;
+}
+.password-field:not(focus):not(:placeholder-shown):valid, .confirm-password-field:not(focus):not(:placeholder-shown):valid {
+  border: #006800 solid 2px;
+}
+
+.pw-chk ~ .pw-chk {
+  padding-left: 25px;
+  font-size: 12px;
+}
+
+.invalid-element::before {
+  content: "✖";
+  padding-right: 5px;
+}
+
+.valid-element {
+  color: rgb(0, 77, 0);
+}
+.valid-element::before {
+  content: "✔  ";
+}
+
+input {
+  appearance: none;
+  outline: none;
+  border: 1px solid #E5E7EB;
+  border-radius: 3px;
+  background-color: #f9fafb;
+  width: 250px;
+  padding: 3px 10px;
+}
+input:focus {
+  border: 1px solid #084365;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+input:not(:focus):not(:placeholder-shown):invalid {
+  border: 2px solid #c80000;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+}
+
+label {
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+
+.submit-footer {
+  padding: 40px;
+}
+
+button {
+  width: 225px;
+  background-color: #084365;
+  color: #f9fafb;
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  color: #084365;
+  text-decoration: none;
+  font-weight: 500;
+}
+a:visited {
+  text-decoration: underline;
+}
+
+.optional-field {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.7rem;
+  padding-left: 5px;
+}
