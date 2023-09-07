@@ -116,7 +116,7 @@ h2 {
   width: auto;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: start;
   flex: 60%;
 }
 
